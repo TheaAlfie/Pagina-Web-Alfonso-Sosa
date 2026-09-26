@@ -1,0 +1,185 @@
+<!-- 01 | DOCTYPE: indica al navegador que utilice las reglas modernas de HTML5. -->
+<!DOCTYPE html>
+<!-- 02 | html: establece el idioma para las herramientas de accesibilidad y los buscadores. -->
+<html lang="es">
+	<!-- 03 | head: contiene ajustes y recursos que no se muestran como contenido. -->
+	<head>
+		<!-- 04 | charset: permite mostrar correctamente letras y signos de puntuación. -->
+		<meta charset="UTF-8">
+		<!-- 05 | viewport: adapta el diseño al ancho real de la pantalla, también en móviles. -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- 06 | description: ofrece un resumen breve para buscadores y vistas previas. -->
+		<meta name="description" content="TareaWeb crea sitios web y experiencias digitales para empresas en crecimiento.">
+		<!-- 07 | title: muestra el nombre de la página en la pestaña del navegador. -->
+		<title>TareaWeb | Estudio digital</title>
+		<!-- 08 | stylesheet: carga las reglas de diseño desde la carpeta de estilos. -->
+		<link rel="stylesheet" href="styles/tarea.css">
+	</head>
+	<!-- 09 | body: contiene todo el contenido visible de la página. -->
+	<body>
+		<!-- 10 | skip link: permite a quienes navegan con teclado ir al contenido principal. -->
+		<a class="skip-link" href="#main-content">Ir al contenido</a>
+
+		<!-- 11 | site header: agrupa la marca y la navegación principal. -->
+		<header class="site-header" id="top">
+			<div class="header-inner">
+				<!-- 12 | brand link: lleva al inicio de la página principal. -->
+				<a class="brand" href="#top" aria-label="Inicio de TareaWeb">
+					<span class="brand-mark" aria-hidden="true">T.</span>
+					<span class="brand-name">Tarea<span>Web</span></span>
+				</a>
+				<!-- 13 | primary navigation: enlaza con las secciones principales de la página. -->
+				<nav class="main-nav" aria-label="Navegación principal">
+					<a href="#services">Servicios</a>
+					<a href="#work">Proyectos</a>
+					<a href="#approach">Proceso</a>
+					<a class="nav-contact" href="#contact">Hablemos <span aria-hidden="true">↗</span></a>
+				</nav>
+			</div>
+		</header>
+
+		<!-- 14 | main: agrupa el contenido central y único de esta página. -->
+		<main id="main-content">
+			<!-- 15 | hero: presenta el estudio y su propuesta principal. -->
+			<section class="hero section-wrap" aria-labelledby="hero-title">
+				<div class="hero-copy">
+					<!-- 16 | eyebrow: identifica brevemente el tipo de estudio. -->
+					<p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Estudio digital independiente</p>
+					<!-- 17 | hero heading: expresa la promesa central de la página. -->
+					<h1 id="hero-title">Las buenas ideas merecen <span>una mejor web.</span></h1>
+					<p class="hero-description">Creamos sitios web claros y con personalidad para que empresas con ambición encuentren su lugar en internet.</p>
+					<!-- 18 | primary call to action: lleva al visitante al formulario de contacto. -->
+					<a class="button button-light" href="#contact">Empecemos un proyecto <span aria-hidden="true">↗</span></a>
+					<p class="hero-note">Estrategia, diseño y desarrollo en un proceso pensado con cuidado.</p>
+				</div>
+				<!-- 19 | hero image: muestra un ejemplo visual de un proyecto digital. -->
+				<div class="hero-visual">
+					<img src="img/hero.jpg" alt="Proyecto de diseño digital colorido mostrado en pantalla" width="1500" height="800">
+					<span class="image-caption">Más claridad. Mucha más personalidad.</span>
+				</div>
+			</section>
+
+			<!-- 20 | studio facts: resume el enfoque y la ubicación del estudio. -->
+			<section class="studio-strip section-wrap" aria-label="Datos del estudio">
+				<p><span class="strip-number">01</span> Diseño con intención</p>
+				<p><span class="strip-number">02</span> Hecho para personas</p>
+				<p><span class="strip-number">03</span> Aguascalientes, México</p>
+			</section>
+
+			<!-- 21 | services section: resume las principales especialidades del estudio. -->
+			<section class="content-section section-wrap" id="services" aria-labelledby="services-title">
+				<div class="section-heading">
+					<p class="eyebrow">Lo que hacemos</p>
+					<h2 id="services-title">Las piezas correctas, <span>trabajando en conjunto.</span></h2>
+					<p>Desde la primera conversación hasta el último detalle, hacemos que lo digital sea más sencillo.</p>
+				</div>
+				<div class="service-list">
+					<!-- 22 | service article: describe el servicio de diseño web. -->
+					<article class="service-item">
+						<span class="service-number">01</span>
+						<div><h3>Diseño web</h3><p>Sitios distintivos y fáciles de usar, diseñados alrededor de tu historia y tus clientes.</p></div>
+						<span class="service-arrow" aria-hidden="true">↗</span>
+					</article>
+					<!-- 23 | service article: describe el diseño de tiendas y catálogos digitales. -->
+					<article class="service-item">
+						<span class="service-number">02</span>
+						<div><h3>Tiendas en línea</h3><p>Experiencias de compra sencillas para que las personas descubran y elijan tus productos.</p></div>
+						<span class="service-arrow" aria-hidden="true">↗</span>
+					</article>
+					<!-- 24 | service article: describe el trabajo de identidad visual y marca. -->
+					<article class="service-item">
+						<span class="service-number">03</span>
+						<div><h3>Identidad visual</h3><p>Una combinación cuidada de color, tipografía e imágenes para reconocer tu marca.</p></div>
+						<span class="service-arrow" aria-hidden="true">↗</span>
+					</article>
+				</div>
+			</section>
+
+			<!-- 25 | work section: presenta algunos proyectos del portafolio. -->
+			<section class="work-section" id="work" aria-labelledby="work-title">
+				<div class="section-wrap">
+					<div class="work-heading">
+						<div><p class="eyebrow">Algunos proyectos</p><h2 id="work-title">Nuestro trabajo</h2></div>
+						<p>Ideas distintas convertidas en experiencias digitales útiles y memorables.</p>
+					</div>
+					<!-- 26 | project grid: organiza los ejemplos en una galería adaptable. -->
+					<div class="project-grid">
+						<!-- 27 | featured project: da mayor énfasis visual al primer proyecto. -->
+						<figure class="project-card project-feature">
+							<img src="img/oreo.jpg" alt="Concepto de interfaz web con detalles visuales destacados" width="1150" height="600" loading="lazy">
+							<figcaption><span>Experiencia digital</span><strong>Una visión integral.</strong></figcaption>
+						</figure>
+						<!-- 28 | project card: muestra un proyecto digital relacionado con videojuegos. -->
+						<figure class="project-card project-coral">
+							<img src="img/game.jpg" alt="Concepto de sitio web creativo para un proyecto de videojuegos" width="1150" height="600" loading="lazy">
+							<figcaption><span>Dirección creativa</span><strong>Un espacio para jugar.</strong></figcaption>
+						</figure>
+						<!-- 29 | project card: muestra un ejemplo de diseño digital. -->
+						<figure class="project-card project-blue">
+							<img src="img/digital.png" alt="Proyecto de diseño digital con una composición limpia y actual" width="1150" height="600" loading="lazy">
+							<figcaption><span>Diseño web</span><strong>Hecho para recordar.</strong></figcaption>
+						</figure>
+						<!-- 30 | project card: muestra un proyecto con identidad visual verde. -->
+						<figure class="project-card project-green">
+							<img src="img/verde.jpg" alt="Proyecto web con una identidad visual verde y fresca" width="1150" height="600" loading="lazy">
+							<figcaption><span>Identidad de marca</span><strong>Una nueva perspectiva.</strong></figcaption>
+						</figure>
+					</div>
+				</div>
+			</section>
+
+			<!-- 31 | approach section: explica de forma sencilla cómo se desarrolla cada proyecto. -->
+			<section class="approach-section section-wrap" id="approach" aria-labelledby="approach-title">
+				<div class="approach-intro">
+					<p class="eyebrow">Un buen proceso importa</p>
+					<h2 id="approach-title">Pasos claros.<br><span>Mejores resultados.</span></h2>
+					<p>Los buenos resultados nacen de buenas conversaciones. Te mantenemos al tanto y participas en cada etapa.</p>
+				</div>
+				<!-- 32 | process list: explica las tres etapas habituales de un proyecto. -->
+				<ol class="process-list">
+					<li><span>01</span><div><h3>Escuchar y conocer</h3><p>Conocemos tus objetivos, tu audiencia y cómo se vería un buen resultado.</p></div></li>
+					<li><span>02</span><div><h3>Dar forma a la idea</h3><p>Organizamos el contenido y definimos un diseño adecuado para tu negocio.</p></div></li>
+					<li><span>03</span><div><h3>Desarrollar y publicar</h3><p>Integramos todo, revisamos los detalles y preparamos tu sitio para salir al mundo.</p></div></li>
+				</ol>
+			</section>
+
+			<!-- 33 | contact section: invita a futuros clientes a compartir su proyecto. -->
+			<section class="contact-section" id="contact" aria-labelledby="contact-title">
+				<div class="contact-inner section-wrap">
+					<div class="contact-copy">
+						<p class="eyebrow">¿Tienes una idea?</p>
+						<h2 id="contact-title">Hagámosla <span>realidad.</span></h2>
+						<p>Cuéntanos un poco sobre tu proyecto. Te responderemos en un día hábil.</p>
+						<a class="contact-email" href="mailto:alfonsomanuelsosaortiz10@gmail.com">alfonsomanuelsosaortiz10@gmail.com <span aria-hidden="true">↗</span></a>
+					</div>
+					<!-- 34 | contact form: recopila nombre, correo y detalles del proyecto. -->
+					<form class="contact-form" action="#contact" method="get">
+						<div class="form-field">
+							<label for="visitor-name">Tu nombre</label>
+							<input id="visitor-name" name="name" type="text" autocomplete="name" placeholder="María García" required>
+						</div>
+						<div class="form-field">
+							<label for="visitor-email">Correo electrónico</label>
+							<input id="visitor-email" name="email" type="email" autocomplete="email" placeholder="maria@ejemplo.com" required>
+						</div>
+						<div class="form-field">
+							<label for="project-note">Cuéntanos sobre tu proyecto</label>
+							<textarea id="project-note" name="message" rows="4" placeholder="¿Qué te gustaría crear?" required></textarea>
+						</div>
+						<!-- 35 | submit button: envía el formulario con el comportamiento predeterminado del navegador. -->
+						<button class="button button-dark" type="submit">Enviar mensaje <span aria-hidden="true">↗</span></button>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<!-- 36 | footer: cierra la página con la marca y el aviso de derechos reservados. -->
+		<footer class="site-footer">
+			<div class="footer-inner section-wrap">
+				<a class="footer-brand" href="#top">Tarea<span>Web</span></a>
+				<p>Sitios web bien pensados para ideas en movimiento.</p>
+				<p class="copyright">© 2026 TareaWeb. Todos los derechos reservados.</p>
+			</div>
+		</footer>
+	</body>
+</html>
