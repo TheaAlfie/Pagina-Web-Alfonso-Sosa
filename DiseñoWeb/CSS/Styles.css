@@ -1,0 +1,727 @@
+/* (@import) Importa la fuente Work Sans para usarla en todo el sitio. */
+/* (@import) Vuelve a identificar la regla que carga la fuente externa del proyecto. */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+
+/* (:root) Guarda colores y medidas reutilizables en todas las páginas. */
+/* (:root) Repite la identificación del bloque donde se declaran las variables globales. */
+:root {
+    --blanco: #ffffff;
+    --negro: #212121;
+    --amarillo: #d4af37;
+    --azul: #4a52c7;
+    --violeta: #5b4775;
+    --morado: #76558f;
+    --rosa: #c77a9f;
+    --rojo: #c96878;
+    --lila: #e6d8e7;
+    --gris: #f1eef5;
+    --primario: #a77da5;
+    --secundario: #d1c9df;
+
+/* (--fuente-principal) Define la familia tipográfica principal del proyecto. */
+--fuente-principal: 'work sans', sans-serif;
+
+/* (--tamañoFuente) Define un tamaño grande reutilizable para títulos. */
+--tamañoFuente: 3.3rem;
+
+}
+
+/* (html) Configura el tamaño base, el modelo de caja y el desplazamiento suave. */
+/* (html) Este selector establece la configuración general del documento. */
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+/* ([id]) Deja espacio superior cuando se navega hacia una sección con ID. */
+/* ([id]) Esta regla afecta a cualquier elemento que tenga un atributo id. */
+[id] {
+    scroll-margin-top: 10rem;
+}
+
+/* (*, *:before, *::after) Hace que padding y bordes se incluyan dentro del tamaño del elemento. */
+/* (*, *:before, *::after) Repite la regla universal para controlar el modelo de caja. */
+*, *:before, *::after {
+    box-sizing: inherit;
+}
+
+/* (body) Define la apariencia general del documento visible. */
+/* (body) Aquí comienza el estilo visual que comparten todas las páginas. */
+
+body{
+    font-size: 16px;
+    font-family: var(--fuente-principal);
+    font-weight: 400;
+    /* la gradiente sirve para que el fondo de la pagina tenga un degradado de color gris a blanco, lo cual le da un efecto visual agradable y moderno al diseño de la página web. Este tipo de fondo puede ayudar a resaltar el contenido principal y mejorar la experiencia del usuario al navegar por el sitio. */
+    background-image: linear-gradient(to top, var(--lila) 0%, var(--gris) 100%);
+}
+
+/* (h1, h2, h3, h4, h5, h6) Centra todos los títulos principales y secundarios. */
+/* (h1, h2, h3, h4, h5, h6) Repite la explicación del grupo general de títulos. */
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
+}
+
+/* (h2) Define el tamaño general de los títulos h2. */
+/* (h2) Este código controla el tamaño de los títulos secundarios. */
+h2{
+    font-size: 2.8rem;
+}
+/* (h3) Define el tamaño general de los títulos h3. */
+/* (h3) Este código controla el tamaño de los subtítulos. */
+h3{
+    font-size: 1.6rem;
+}
+
+/* (.sombra) Crea el panel principal de la portada con sombra, fondo y separación. */
+/* (.sombra) Identifica nuevamente el panel que contiene el contenido principal. */
+.sombra {
+    -webkit-box-shadow: 10px 17px 11px -4px
+    rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 17px 11px -4px
+    rgba(0,0,0,0.75);
+    box-shadow: 10px 17px 11px -4px rgba(0,0,0,0.75);
+    border-radius: 2rem;
+    background-image: linear-gradient(to top, var(--gris) 0%, var(--lila) 70%);
+        padding: 3rem;
+        color: rgb(12, 5, 47);
+        line-height: 1.8;
+}
+
+/* (.titulo) Da formato a los títulos que usan la clase titulo. */
+.titulo {
+    /* texto-align: center */
+    font-size: var(--tamañoFuente);
+        color: rgb(52, 43, 93);
+}
+
+/* (.titulo span) Reduce el tamaño de los textos secundarios dentro de un titulo. */
+.titulo span {
+    font-size: 2rem;
+} 
+
+/* (.subtitulo) Estiliza los subtítulos destacados de la página de inicio. */
+.subtitulo {
+    text-align: center;
+    font-size: 3.8rem;
+    color: var(--negro);
+    padding: 2rem 0;
+}
+
+/* (.place) Da formato al texto de ubicación y a los enlaces relacionados. */
+.place {
+    font-weight: 600;
+    color: var(--negro)
+}
+
+/* (.boton) Convierte un enlace o input en un botón visual. */
+.boton {
+    background-color: var(--secundario);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    width: 80%;
+    text-align: center;
+    border: none;
+}
+
+/* (.contenedor) Limita el ancho del contenido y lo centra horizontalmente. */
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+}
+
+/* (clases compartidas) Agrupa estilos usados por la portada y las páginas internas. */
+/* (.encabezado) Organiza verticalmente el encabezado del sitio. */
+.encabezado { display: flex; align-items: center; min-height: 18rem; padding: 5.5rem 0 4rem; text-align: center; }
+/* (.marca) Presenta el nombre de la marca y su texto secundario. */
+.marca { width: 100%; margin: 0; color: var(--violeta); font-size: clamp(2.6rem, 5vw, 4.8rem); font-weight: 700; letter-spacing: -0.04em; line-height: 1.1; }
+/* (.marca span) Separa y diferencia el subtítulo de la marca. */
+.marca span { display: block; margin-top: 0.8rem; color: var(--morado); font-size: clamp(1.4rem, 2vw, 1.8rem); font-weight: 500; letter-spacing: 0; }
+/* (.barra-navegacion) Colorea la franja que contiene el menú principal. */
+.barra-navegacion { background: var(--primario); }
+/* (.navegacion) Distribuye los seis enlaces de navegación en columnas. */
+.navegacion { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; }
+/* (.navegacion a) Centra y dimensiona cada enlace del menú. */
+.navegacion a { display: flex; align-items: center; justify-content: center; min-height: 5.6rem; padding: 1rem; color: var(--blanco); font-size: 1.5rem; font-weight: 600; text-align: center; text-decoration: none; transition: background-color 180ms ease, color 180ms ease; }
+/* (.navegacion a:hover, .navegacion a:focus-visible) Cambia el color del enlace cuando el usuario pasa el cursor o usa el teclado. */
+.navegacion a:hover, .navegacion a:focus-visible { color: var(--negro); background: var(--secundario); outline: none; }
+/* (.portada) Marca visualmente las secciones que funcionan como portada. */
+.portada { background-color: var(--blanco); }
+/* (.categoria) Identifica visualmente la categoría de cada sección. */
+.categoria { display: inline-block; margin-bottom: 1.2rem; color: var(--morado); font-size: 1.25rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+
+/* Conserva el color principal para barras de navegación antiguas o alternativas. */
+.nav-bg {
+    background-color: var(--primario);
+}
+
+/* Organiza la navegación alternativa en una columna. */
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cambia el botón y la navegación cuando hay espacio para una vista amplia. */
+@media (min-width: 480px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .boton {
+        width: auto;
+    }
+}
+
+/* Indica que el botón se puede seleccionar. */
+.boton:hover {
+    cursor: pointer;
+}
+
+/* Define el tamaño y el color de los enlaces de la navegación alternativa. */
+.navegacion-principal a {
+    padding: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/* Resalta los enlaces alternativos al pasar el cursor. */
+.navegacion-principal a:hover {
+    background-color: var(--secundario);
+    color: var(--negro);
+}
+
+/* Prepara el contenedor de la imagen principal. */
+.hero {
+    background-image: none;
+    height: auto;
+    margin-bottom: 0;
+}
+
+/* Ajusta la imagen principal para ocupar todo el ancho disponible. */
+.hero img {
+    display: block;
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+}
+
+/* Controla el espacio interno que contiene la imagen principal. */
+.contenido-hero {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+}
+
+/* Centra la información que aparece debajo de la imagen principal. */
+.datos-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem 3rem;
+}
+
+/* Alinea el icono y el texto de la ubicación. */
+.info-ubicacion {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Restablece márgenes y colores de elementos colocados sobre el hero. */
+.hero .subtitulo,
+.hero .place,
+.hero .boton {
+    color: initial;
+    margin: 0;
+}
+
+/* Da forma al bloque que contiene los enlaces del índice. */
+.indice {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2rem 0;
+    margin-top: 1rem;
+}
+
+/* Organiza los enlaces del índice en una lista flexible. */
+.lista-indice {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+}
+
+/* Da formato a cada enlace del índice. */
+.lista-indice a {
+    color: var(--negro);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Muestra los servicios en dos columnas en pantallas medianas. */
+@media (min-width: 780px) {
+
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3rem;
+
+    }
+
+}
+
+/* Muestra los servicios en tres columnas en pantallas grandes. */
+@media (min-width: 1100px) {
+    .servicios {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Centra el contenido de cada servicio. */
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Mejora la lectura de las descripciones de servicios. */
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+/* Crea el círculo visual que contiene el icono de cada servicio. */
+.servicio .icono {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--secundario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Separa y resalta la sección de logotipos e identidad visual. */
+.logotipos {
+    margin: 6rem 0;
+    padding: 3rem 2rem;
+    border-top: 0.3rem solid var(--primario);
+    border-bottom: 0.3rem solid var(--primario);
+    text-align: center;
+}
+
+/* Elimina el margen extra del título dentro de logotipos. */
+.logotipos .subtitulo {
+    margin: 0;
+}
+
+/* Diseña el formulario de contacto como un bloque centrado. */
+.formulario {
+    background-color: var(--secundario);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/* Quita el borde predeterminado del grupo del formulario. */
+.formulario fieldset {
+    border: none;
+}
+
+/* Centra y destaca el texto que presenta el formulario. */
+.formulario legend {
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+/* Ordena los campos del formulario con separación uniforme. */
+.contenedor-campos {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Agrega espacio antes de la sección de contacto. */
+.contacto {
+    margin-top: 4rem;
+}
+
+/* Limita el ancho de los párrafos para facilitar la lectura. */
+.texto {
+    max-width: 80rem;
+    margin: 0 auto 2rem;
+}
+
+/* Hace que la imagen de la sección sea adaptable al ancho disponible. */
+.imagen-oreo {
+    display: block;
+    width: 100%;
+    max-width: 115rem;
+    height: auto;
+    margin: 0 auto 3rem;
+}
+
+/* Organiza la galería de proyectos en una columna por defecto. */
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin: 3rem 0 5rem;
+}
+
+/* Elimina márgenes innecesarios dentro de cada elemento de la galería. */
+.galeria section {
+    margin: 0;
+}
+
+/* Mantiene proporción y recorte uniforme en las imágenes de proyectos. */
+.galeria img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1150 / 600;
+    object-fit: cover;
+}
+
+/* Separa la sección de preguntas frecuentes del resto del contenido. */
+.preguntas-frecuentes {
+    margin: 5rem 0;
+}
+
+/* Separa el título de las preguntas de sus respuestas. */
+.preguntas-frecuentes .subtitulo {
+    margin-bottom: 2rem;
+}
+
+/* Apila las preguntas y limita su ancho para mejorar la lectura. */
+.preguntas-lista {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+/* Da apariencia de tarjeta a cada pregunta desplegable. */
+.preguntas-lista details {
+    padding: 1.5rem 2rem;
+    border: 0.2rem solid var(--secundario);
+    border-radius: 0.8rem;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Destaca el texto que se puede pulsar para abrir una pregunta. */
+.preguntas-lista summary {
+    color: var(--violeta);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Separa la respuesta del encabezado de la pregunta. */
+.preguntas-lista p {
+    margin: 1.5rem 0 0;
+}
+
+/* Divide la galería en dos columnas en pantallas amplias. */
+@media (min-width: 780px) {
+    .galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Separa verticalmente cada campo del formulario. */
+.campo {
+    margin-bottom: 1rem;
+}
+
+/* Da formato a las etiquetas que explican cada campo. */
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Define una altura cómoda para el mensaje del cliente. */
+.campo textarea {
+    height: 20rem;
+}
+
+/* Uniforma la apariencia de inputs y áreas de texto. */
+.input-text {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+/* Hace que el botón de envío ocupe todo el ancho del formulario. */
+.enviar .boton {
+    width: 100%;
+    background-color: var(--morado);
+    color: var(--blanco);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+/* Presenta los datos de contacto en un bloque destacado. */
+.datos-contacto {
+    width: min(70rem, 100%);
+    margin: 4rem auto 0;
+    padding: 1rem 3rem 3rem;
+    background-color: var(--secundario);
+    border: 0.4rem solid var(--primario);
+    border-radius: 2rem;
+    box-shadow: 0 0.8rem 0 var(--violeta);
+}
+
+/* Ajusta el título dentro del bloque de datos de contacto. */
+.datos-contacto .subtitulo {
+    color: var(--negro);
+    margin-top: 0;
+}
+
+/* Da formato de ficha a cada dato de contacto. */
+.datos-contacto p {
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-left: 0.5rem solid var(--morado);
+    border-radius: 0.8rem;
+    color: rgb(12, 5, 47);
+    line-height: 1.6;
+}
+
+/* Resalta los enlaces de teléfono y correo electrónico. */
+.datos-contacto a {
+    color: var(--violeta);
+    font-weight: 700;
+}
+
+/* Separa la tabla de precios de los elementos anteriores. */
+.tabla-precios {
+    margin-top: 3rem;
+}
+
+/* Permite desplazar la tabla horizontalmente en pantallas pequeñas. */
+.tabla-scroll {
+    overflow-x: auto;
+    border: 0.3rem solid var(--primario);
+    border-radius: 1.5rem;
+    background-color: var(--blanco);
+}
+
+/* Define el ancho y la estructura general de la tabla de precios. */
+.tabla-precios table {
+    width: 100%;
+    min-width: 70rem;
+    border-collapse: collapse;
+    color: rgb(12, 5, 47);
+}
+
+/* Da formato al título descriptivo de la tabla. */
+.tabla-precios caption {
+    padding: 1rem;
+    color: var(--negro);
+    font-weight: 700;
+    text-align: left;
+}
+
+/* Ajusta celdas y encabezados para que la tabla sea legible. */
+.tabla-precios th,
+.tabla-precios td {
+    padding: 1.5rem;
+    border: 0.1rem solid var(--secundario);
+    line-height: 1.6;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Diferencia visualmente los encabezados principales de la tabla. */
+.tabla-precios thead th {
+    background-color: var(--primario);
+    color: var(--blanco);
+}
+
+/* Diferencia los encabezados de cada fila. */
+.tabla-precios tbody th {
+    background-color: rgba(189, 180, 214, 0.45);
+}
+
+/* Alterna el fondo de las filas pares para facilitar su seguimiento. */
+.tabla-precios tbody tr:nth-child(even) td {
+    background-color: rgba(237, 126, 221, 0.12);
+}
+
+/* Separa la información adicional de precios. */
+.extras-precios {
+    margin-top: 3rem;
+}
+
+/* Mejora la lectura de las condiciones adicionales de precios. */
+.extras-precios p {
+    color: rgb(12, 5, 47);
+    line-height: 1.8;
+}
+
+/* Sistema compartido para las páginas internas. */
+/* Define fondo, tipografía y altura mínima de las páginas internas. */
+.pagina-interna { min-height:100vh; margin:0; color:var(--negro); font-family:var(--fuente-principal); background:linear-gradient(145deg,var(--gris),var(--lila)); line-height:1.7; }
+/* Mantiene el color de los enlaces internos. */
+.pagina-interna a { color:inherit; }
+/* Reafirma la estructura del encabezado en páginas internas. */
+.pagina-interna .encabezado { display:flex; align-items:center; min-height:180px; padding:55px 0 40px; text-align:center; }
+/* Ajusta la marca dentro de las páginas internas. */
+.pagina-interna .marca { margin:0; color:var(--violeta); font-size:clamp(26px,5vw,48px); font-weight:700; letter-spacing:-.04em; line-height:1.1; }
+/* Ajusta el subtítulo de la marca interna. */
+.pagina-interna .marca span { display:block; margin-top:8px; color:var(--morado); font-size:clamp(14px,2vw,18px); font-weight:500; letter-spacing:0; }
+/* Mantiene el color de la barra de navegación interna. */
+.pagina-interna .barra-navegacion { background:var(--primario); }
+/* Limita y divide el menú interno en seis columnas. */
+.pagina-interna .navegacion { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); width:100%; max-width:1200px; gap:0; }
+/* Estiliza los enlaces del menú interno. */
+.pagina-interna .navegacion a { display:flex; align-items:center; justify-content:center; min-height:56px; padding:10px; color:var(--blanco); font-size:15px; font-weight:600; text-align:center; text-decoration:none; transition:background-color 180ms ease,color 180ms ease; }
+/* Define el estado activo del menú al pasar el cursor o usar el teclado. */
+.pagina-interna .navegacion a:hover,.pagina-interna .navegacion a:focus-visible { color:var(--negro); background:var(--secundario); outline:none; }
+/* Agrega espacio alrededor del contenido principal interno. */
+.pagina-interna main { padding:50px 0 70px; }
+/* Separa las secciones internas entre sí. */
+.pagina-interna .seccion { margin-bottom:50px; }
+/* Ajusta el espacio de la categoría dentro de páginas internas. */
+.pagina-interna .categoria { margin-bottom:12px; }
+/* Da apariencia de tarjeta a portadas, beneficios, proyectos y paquetes. */
+.pagina-interna .portada,.pagina-interna .beneficio,.pagina-interna .paso,.pagina-interna .proyecto,.pagina-interna .habilidad,.pagina-interna .politica,.pagina-interna .paquete,.pagina-interna .nota { background:var(--blanco); border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.05); }
+/* Agrega espacio interno a la portada de cada página. */
+.pagina-interna .portada { padding:50px; }
+/* Colorea y ajusta la altura de los títulos internos. */
+.pagina-interna h1,.pagina-interna h2,.pagina-interna h3 { color:var(--violeta); line-height:1.15; }
+/* Define tamaño y separación del título principal interno. */
+.pagina-interna h1 { margin:0 0 18px; font-size:clamp(28px,5vw,48px); }
+/* Define tamaño y separación de los títulos secundarios internos. */
+.pagina-interna h2 { margin:0 0 12px; font-size:clamp(26px,4vw,40px); }
+/* Define tamaño y separación de los subtítulos internos. */
+.pagina-interna h3 { margin:14px 0 8px; font-size:20px; }
+/* Uniforma los párrafos de las páginas internas. */
+.pagina-interna p { margin:0 0 18px; font-size:17px; }
+/* Organiza los botones de acción y permite que se ajusten en varias líneas. */
+.pagina-interna .acciones { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+/* Diseña los botones principales de las páginas internas. */
+.pagina-interna .boton { display:inline-flex; align-items:center; justify-content:center; min-height:48px; width:auto; padding:10px 20px; border:2px solid var(--morado); border-radius:8px; background:var(--morado); color:var(--blanco); font-size:15px; font-weight:700; text-decoration:none; text-transform:none; transition:transform 180ms ease,background-color 180ms ease; }
+/* Crea la versión secundaria y transparente del botón. */
+.pagina-interna .boton.secundario { background:transparent; color:var(--morado); }
+/* Mueve y colorea el botón cuando recibe interacción. */
+.pagina-interna .boton:hover,.pagina-interna .boton:focus-visible { transform:translateY(-2px); background:var(--violeta); outline:none; }
+/* Cambia el texto del botón secundario durante la interacción. */
+.pagina-interna .boton.secundario:hover,.pagina-interna .boton.secundario:focus-visible { color:var(--blanco); }
+/* Divide la portada de nosotros en contenido y métricas. */
+.pagina-interna .sobre { display:grid; grid-template-columns:1.15fr .85fr; gap:30px; }
+/* Organiza las métricas en dos columnas. */
+.pagina-interna .metricas { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; }
+/* Diseña cada tarjeta de métrica destacada. */
+.pagina-interna .metrica { display:flex; flex-direction:column; justify-content:center; min-height:150px; padding:20px; border-radius:16px; background:var(--secundario); text-align:center; }
+/* Destaca el valor numérico de una métrica. */
+.pagina-interna .metrica strong { color:var(--violeta); font-size:36px; line-height:1; }
+/* Separa el texto descriptivo del valor de la métrica. */
+.pagina-interna .metrica span { margin-top:8px; font-size:15px; font-weight:600; }
+/* Limita el ancho de los encabezados descriptivos de sección. */
+.pagina-interna .encabezado-seccion { max-width:780px; margin-bottom:25px; }
+/* Muestra los beneficios en cuatro columnas. */
+.pagina-interna .beneficios { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; }
+/* Agrega espacio interno a cada beneficio. */
+.pagina-interna .beneficio { padding:25px 20px; }
+/* Crea el contenedor visual de los iconos internos. */
+.pagina-interna .icono { display:grid; width:48px; height:48px; place-items:center; border-radius:12px; background:var(--lila); color:var(--morado); }
+/* Define el tamaño de los iconos SVG. */
+.pagina-interna .icono svg { width:25px; height:25px; }
+/* Uniforma el texto pequeño de tarjetas y paquetes. */
+.pagina-interna .beneficio p,.pagina-interna .paso p,.pagina-interna .proyecto p,.pagina-interna .habilidad p,.pagina-interna .politica p,.pagina-interna .paquete p { margin:0; font-size:15px; }
+/* Organiza pasos y proyectos en tres columnas. */
+.pagina-interna .pasos,.pagina-interna .proyectos { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
+/* Da espacio interno a cada paso y proyecto. */
+.pagina-interna .paso,.pagina-interna .proyecto { padding:28px 25px 25px; }
+/* Destaca el número que identifica cada paso o proyecto. */
+.pagina-interna .numero { color:var(--primario); font-size:45px; font-weight:700; line-height:1; }
+/* Organiza las áreas de trabajo en cuatro columnas. */
+.pagina-interna .habilidades { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; }
+/* Ajusta el espacio de cada tarjeta de habilidad. */
+.pagina-interna .habilidad { padding:22px 18px; }
+/* Organiza las políticas en dos columnas. */
+.pagina-interna .politicas { display:grid; grid-template-columns:repeat(2,1fr); gap:15px; }
+/* Agrega separación interna a cada política. */
+.pagina-interna .politica { padding:25px 22px; }
+/* Organiza los paquetes de precios en cuatro columnas. */
+.pagina-interna .paquetes { display:grid; grid-template-columns:repeat(4,1fr); gap:15px; }
+/* Coloca verticalmente el contenido de cada paquete. */
+.pagina-interna .paquete { display:flex; flex-direction:column; padding:25px 20px; }
+/* Destaca el paquete recomendado con un color diferente. */
+.pagina-interna .paquete.destacado { background:var(--violeta); color:var(--blanco); }
+/* Mantiene visibles los títulos y precios del paquete destacado. */
+.pagina-interna .paquete.destacado h3,.pagina-interna .paquete.destacado .precio { color:var(--blanco); }
+/* Reserva una altura similar para los títulos de paquetes. */
+.pagina-interna .paquete h3 { min-height:50px; }
+/* Resalta el precio de cada paquete comercial. */
+.pagina-interna .precio { display:block; margin:10px 0 15px; color:var(--morado); font-size:24px; font-weight:700; line-height:1.2; }
+/* Ordena las características de cada paquete como una lista. */
+.pagina-interna .paquete ul { display:grid; gap:8px; margin:0; padding:0; list-style:none; font-size:14.5px; }
+/* Prepara cada característica para mostrar su símbolo. */
+.pagina-interna .paquete li { position:relative; padding-left:18px; }
+/* Agrega el signo visual delante de cada característica. */
+.pagina-interna .paquete li::before { content:'+'; position:absolute; left:0; color:var(--primario); font-weight:700; }
+/* Agrega espacio interno a la nota final de precios. */
+.pagina-interna .nota { padding:28px 30px; }
+/* Reduce el tamaño del texto complementario de la nota. */
+.pagina-interna .nota p { font-size:15px; }
+/* Diseña el pie de página de las páginas internas. */
+.pagina-interna footer { padding:30px 20px; background:var(--violeta); color:var(--blanco); text-align:center; }
+/* Ajusta el texto del pie de página. */
+.pagina-interna footer p { margin:0; font-size:14px; }
+/* Reduce los paquetes a dos columnas en pantallas medianas. */
+@media (max-width:950px) { .pagina-interna .paquetes { grid-template-columns:repeat(2,1fr); } }
+/* Reduce varias cuadrículas a dos columnas en pantallas más estrechas. */
+@media (max-width:800px) { .pagina-interna .sobre,.pagina-interna .beneficios,.pagina-interna .habilidades { grid-template-columns:repeat(2,1fr); } .pagina-interna .sobre { grid-template-columns:1fr; } }
+/* Adapta todas las tarjetas, menú y botones a pantallas móviles. */
+@media (max-width:560px) { .pagina-interna .contenedor { width:min(100% - 24px,1120px); } .pagina-interna .encabezado { padding:35px 0 25px; } .pagina-interna .navegacion { grid-template-columns:repeat(3,minmax(0,1fr)); } .pagina-interna .navegacion a { min-height:48px; padding:11px 5px; font-size:14px; } .pagina-interna main { padding:30px 0 40px; } .pagina-interna .portada { padding:30px 25px; } .pagina-interna .beneficios,.pagina-interna .habilidades,.pagina-interna .pasos,.pagina-interna .proyectos,.pagina-interna .metricas,.pagina-interna .politicas,.pagina-interna .paquetes { grid-template-columns:1fr; } .pagina-interna .acciones .boton { width:100%; } }
+
+/* Organiza los enlaces de redes sociales en una fila centrada. */
+.redes-sociales {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Conserva los iconos sociales alineados y con el color del pie. */
+.redes-sociales a {
+    display: inline-flex;
+    color: var(--blanco);
+}
+
+/* Centra los textos de cualquier pie de página. */
+footer p {
+    text-align: center;
+}
+
+/* Los comentarios CSS no se muestran en el navegador y sirven como guía del código. */
+/* para el proyecto ir defininiendo paleta de colores (mínimo 10) */
+/* 1 REM es igual a 10 píxeles */
+/* justify content alinea los elementos de manera horizontal, mientras que align-items alinea los elementos de manera vertical. En este caso, se está utilizando justify-content: center para centrar los elementos horizontalmente y align-items: center para centrar los elementos verticalmente dentro del contenedor. Esto es útil para crear un diseño equilibrado y estéticamente agradable en la página web. */

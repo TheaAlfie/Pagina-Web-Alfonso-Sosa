@@ -1,0 +1,284 @@
+<!-- (<!DOCTYPE html>) Declara que el documento utiliza HTML5. -->
+<!-- (<!DOCTYPE html>) Repite que este documento utiliza la versión HTML5. -->
+<!DOCTYPE html>
+<html lang="es">
+<!-- (<head>) Contiene la configuración no visible de la página. -->
+<!-- (<head>) Repite que aquí se encuentran el título, metadatos y enlace al CSS. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tu propia página web | Alfonso Sosa</title>
+    <link rel="stylesheet" href="CSS/Styles.css">
+</head>
+<!-- (<body>) Contiene todo el contenido visible para el visitante. -->
+<!-- (<body>) Repite que dentro de este elemento se muestra la página al visitante. -->
+<body>
+    <!-- las etiquetas de arriba sirven para ponerle estilos a nuestra pagina web, es decir, que le podemos poner colores, tamaños de letra, tipos de letra, etc. a nuestra pagina web. y tambien podemos ponerle estilos a nuestras imagenes, es decir, que le podemos poner bordes, sombras, etc. a nuestras imagenes. -->
+    <!-- La etiqueta header nos ayuda a identificar el contenido del encabezado de nuestra pagina web -->
+    <!-- (<header class="encabezado">) Encabezado con el nombre y la identidad del sitio. -->
+    <!-- (<header class="encabezado">) Repite que esta sección presenta la identidad del negocio. -->
+    <header id="inicio" class="encabezado">
+        <div class="contenedor">
+            <p class="marca">Alfonso Sosa<span>Diseño web y comercio electrónico</span></p>
+        </div>
+    </header>
+    <!-- (<div class="barra-navegacion">) Barra con los enlaces principales del sitio. -->
+    <!-- (<div class="barra-navegacion">) Repite que este bloque contiene el menú principal. -->
+    <div class="barra-navegacion">
+        <nav class="navegacion contenedor" aria-label="Navegación principal">
+            <a href="index.html" aria-current="page">Inicio</a>
+            <a href="pages/nosotros.html">Nosotros</a>
+            <a href="pages/portafolio.html">Portafolio</a>
+            <a href="pages/politicas.html">Políticas</a>
+            <a href="pages/precios.html">Precios</a>
+            <a href="#contacto">Contacto</a>
+            <!-- la letra a es un hipervinculo, es decir, que te lleva a otra pagina web, en este caso te lleva a la pagina web que esta en la direccion "a", pero si le pones una direccion de una pagina web real, te llevara a esa pagina web. por ejemplo, si le pones "https://www.google.com" te llevara a la pagina web de google. -->
+        </nav>
+    </div>
+
+    <!-- (<section class="indice">) Índice para acceder rápidamente a las secciones de la portada. -->
+    <!-- (<section class="indice">) Repite que esta sección enlaza con las partes de la página. -->
+    <section id="indice" class="indice">
+        <div class="contenedor">
+            <h2>Índice</h2>
+            <ul class="lista-indice">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#logotipos">Logotipos</a></li>
+                <li><a href="#resultados">Resultados</a></li>
+                <li><a href="#preguntas">Preguntas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- (<section class="hero portada">) Portada visual con la imagen principal del proyecto. -->
+    <!-- (<section class="hero portada">) Repite que este bloque funciona como portada visual. -->
+    <section class="hero portada">
+        <div class="contenido-hero">
+            <img src="img/hero.jpg" alt="Diseño visual de una página web" width="1500" height="800">
+        </div>
+    </section>
+
+    <section class="datos-hero contenedor">
+        <h2 class="subtitulo">Somos tu garantía de calidad</h2>
+
+        <div class="info-ubicacion">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-map-2"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 18.5l-3 -1.5l-6 3v-13l6 -3l6 3l6 -3v7.5" /><path d="M9 4v13" /><path d="M15 7v5.5" /><path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879" /><path d="M19 18v.01" /></svg>
+            <p class="place">Aguascalientes, Ags.</p>
+        </div>
+
+        <a href="#contacto" class="place boton">Agendar cita</a>
+    </section>
+
+    <!-- (<main class="contenedor sombra">) Contenido principal con servicios y contacto. -->
+    <!-- (<main class="contenedor sombra">) Repite que aquí comienza el contenido principal del sitio. -->
+    <main id="cuerpo" class="contenedor sombra">
+
+        <h2 id="servicios">Mis servicios</h2>
+
+        <!-- (<div class="servicios">) Lista de servicios ofrecidos al cliente. -->
+        <div class="servicios">
+        
+            <section class="servicio">
+               <h3>Diseño web</h3>
+
+                   <div class="icono">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-palette"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" /><path d="M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                         </div>
+                        <p>Creo páginas web claras, atractivas y funcionales, adaptadas a la identidad de cada proyecto. Organizo la información para que tus visitantes encuentren lo que necesitan y conozcan mejor tu negocio.</p>
+                    </section>
+
+                    <section class="servicio">
+                <h3>Comercio electrónico</h3>
+
+                     <div class="icono">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-palette"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" /><path d="M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                         </div>
+                        <p>Diseño tiendas en línea y catálogos digitales con productos organizados, llamados a la acción visibles y una experiencia de compra sencilla desde cualquier dispositivo.</p>
+                    </section>
+
+                    <section class="servicio">
+                <h3>Acompañamiento cercano</h3>
+
+                    <div class="icono">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-palette"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 21a9 9 0 0 1 0 -18c4.97 0 9 3.582 9 8c0 1.06 -.474 2.078 -1.318 2.828c-.844 .75 -1.989 1.172 -3.182 1.172h-2.5a2 2 0 0 0 -1 3.75a1.3 1.3 0 0 1 -1 2.25" /><path d="M7.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M11.5 7.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M15.5 10.5a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+                         </div>
+                        <p>Escucho tus objetivos, propongo soluciones y reviso contigo cada etapa del proyecto. Así construimos una página confiable, útil y alineada con las necesidades de tu negocio.</p>
+            </section>
+
+        </div>
+        <!-- ahi va la seccion de formulario -->
+
+        <!-- (<section class="logotipos">) Explica el servicio de logotipos e identidad visual. -->
+        <section id="logotipos" class="logotipos">
+            <h2 class="subtitulo">Logotipos e identidad visual</h2>
+            <p class="texto">Un buen logotipo ayuda a que tu negocio sea fácil de reconocer y transmite la personalidad de tu marca desde el primer vistazo.</p>
+            <p class="texto">Creo propuestas visuales con colores, formas y tipografías coherentes para que tu identidad se mantenga clara y profesional en tu página web, redes sociales y materiales digitales.</p>
+        </section>
+
+    <!-- (<section class="oreo">) Describe el proceso de trabajo y muestra resultados. -->
+    <section class="oreo">
+        <div class="contenido-oreo">
+            <h2 class="subtitulo">Sistemas integrados para mejorar la funcionalidad</h2>
+            <!-- aqui vamos a poner nuestra iimagen hero -->
+             <img class="imagen-oreo" src="img/oreo.jpg" alt="Ejemplo de una interfaz web" width="1150" height="600">
+
+            <h2 class="subtitulo">¿Cómo funciona nuestro proceso?</h2>
+
+            <p class="texto">En nuestro proceso nos comprometemos con la información de cada cliente. Al recibir tu formulario, revisamos los datos, confirmamos tus necesidades y organizamos la solicitud para comenzar el proyecto de manera ordenada.
+
+             Después recibirás un correo o un mensaje con la información de tu solicitud, para que puedas confirmar que los datos son correctos y conocer el siguiente paso.
+            </p>
+
+            <h2 class="subtitulo">¿En cuánto tiempo recibirás una respuesta?</h2>
+
+             <p class="texto">Nos comprometemos a revisar tu solicitud en un plazo de 24 horas. Si no recibes respuesta durante ese periodo, comunícate con nosotros para dar seguimiento y resolver cualquier inconveniente.
+            </p>
+
+            <h2 id="resultados" class="subtitulo">Galería de resultados de nuestros clientes</h2>
+
+            <div class="galeria">
+                <section class="game">
+        <div class="contenido-game">
+             <img src="img/game.jpg" alt="Proyecto web de videojuegos" width="1150" height="600">
+        </div>
+                </section>
+
+                 <section class="digital">
+        <div class="contenido-digital">
+             <img src="img/digital.png" alt="Proyecto de diseño digital" width="1150" height="600">
+        </div>
+                 </section>
+
+                 <section class="verde">
+        <div class="contenido-verde">
+             <img src="img/verde.jpg" alt="Proyecto web con identidad visual verde" width="1150" height="600">
+        </div>
+                 </section>
+
+                 <section class="azul">
+        <div class="contenido-azul">
+             <img src="img/azul.jpg" alt="Proyecto web con identidad visual azul" width="1150" height="600">
+        </div>
+                 </section>
+
+                 <section class="rojo">
+        <div class="contenido-rojo">
+             <img src="img/rojo.jpg" alt="Proyecto web con identidad visual roja" width="1150" height="600">
+        </div>
+                 </section>
+
+                 <section class="blanco">
+        <div class="contenido-blanco">
+             <img src="img/blanco.jpg" alt="Proyecto web con identidad visual clara" width="1150" height="600">
+        </div>
+                 </section>
+              </div>
+
+        <!-- (<section class="preguntas-frecuentes">) Preguntas frecuentes para resolver dudas del visitante. -->
+        <section id="preguntas" class="preguntas-frecuentes">
+            <h2 class="subtitulo">Preguntas frecuentes</h2>
+
+            <div class="preguntas-lista">
+                <details>
+                    <summary>¿Cuánto tarda en comenzar un proyecto?</summary>
+                    <p>Después de recibir tu información, revisamos tus necesidades y nos ponemos en contacto contigo en un plazo máximo de 24 horas.</p>
+                </details>
+
+                <details>
+                    <summary>¿El sitio web se adapta a celulares?</summary>
+                    <p>Sí. Cada página se diseña para verse correctamente en celulares, tabletas y computadoras.</p>
+                </details>
+
+                <details>
+                    <summary>¿Puedo solicitar cambios durante el proceso?</summary>
+                    <p>Claro. Revisamos cada etapa contigo para realizar ajustes y mantener el proyecto alineado con tus objetivos.</p>
+                </details>
+            </div>
+        </section>
+
+         <!-- (<section class="contacto">) Formulario y datos para solicitar una cita. -->
+         <section id="contacto" class="contacto">
+
+            <!-- titulo de la nueva seccion -->
+            <h2>Contáctanos</h2>
+
+            <form class="formulario">
+            <fieldset>
+           <legend>Envíanos un mensaje para programar una cita</legend>
+
+           <div class="contenedor-campos">
+            <div class="campo">
+                <label>Introduce tu nombre</label>
+                <input type="text"
+                class="input-text"
+                placeholder="Aquí va tu nombre">
+            </div>
+
+            <div class="campo">
+                <label>Teléfono</label>
+                    <input
+                        class="input-text"
+                        type="tel"
+                        placeholder="Aquí va tu teléfono">
+                     </div>
+
+                     <div class="campo">
+                        <label>Correo electrónico</label>
+                        <input
+                            class="input-text"
+                            type="email"
+                            placeholder="Aquí va tu correo">
+                     </div>
+
+                     <div class="campo">
+                       <label>Mensaje</label>
+                      <textarea 
+                            class="input-text"
+                            placeholder="Aquí va tu mensaje"></textarea>
+                  </div>
+
+                  <div class="enviar">
+                    <input
+                        type="submit"
+                        class="boton"
+                        value="Enviar">
+                  </div>
+                </div>
+                </fieldset>
+          </form>
+            </section>
+            </div>
+            </section>
+
+            <section class="datos-contacto">
+                <h2 class="subtitulo">Datos de contacto</h2>
+                <p><strong>Nombre:</strong> Alfonso Manuel Sosa Ortiz</p>
+                <p><strong>Teléfono:</strong> <a href="tel:+524493855881">449 385 5881</a></p>
+                <p><strong>Correo electrónico:</strong> <a href="mailto:alfonsomanuelsosaortiz10@gmail.com">alfonsomanuelsosaortiz10@gmail.com</a></p>
+                <p><strong>Oficina:</strong> Av. Universidad 940, Col. Bosques del Prado, Aguascalientes, Ags.</p>
+            </section>
+    </main>
+
+    <!-- (<footer>) Pie con redes sociales y derechos reservados. -->
+    <footer id="pie">
+        <!-- aqui los alumnos va a angregar 4 iconos de 4 redes sociales y van a linkearlos a sus redes social  -->
+
+        <div class="redes-sociales">
+
+            <a href="https://www.instagram.com/the.alfiie?igsi=MXFncmRmZGd5dHoy" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg></a>
+            <a href="https://www.facebook.com/share/1GicewVMyk/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg></a>
+            <a href="https://x.com/ethical_comerce" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg></a>
+            <a href="https://www.threads.com/@the.alfiie" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-threads"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M19 7.5c-1.333 -3 -3.667 -4.5 -7 -4.5c-5 0 -8 2.5 -8 9s3.5 9 8 9s7 -3 7 -5s-1 -5 -7 -5c-2.5 0 -3 1.25 -3 2.5c0 1.5 1 2.5 2.5 2.5c2.5 0 3.5 -1.5 3.5 -5s-2 -4 -3 -4s-1.833 .333 -2.5 1" /></svg></a>
+
+        </div>
+         <p>Todos los derechos reservados. Alfonso Sosa</p>
+    </footer>
+
+</body>
+</html> 
